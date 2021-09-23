@@ -9,87 +9,132 @@
     />
 
     <link rel="icon" href="devchallenges.png" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="https://devchallenges.io/"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    <title>WeatherApp</title>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+    <header class="header-menu">
+      <nav>
+        <button class="search-button" id="search">Search for places</button>
+        <button class="pocision-button"><img fill="red" src="./assets/icons/pocision.svg" alt=""></button>
+      </nav>
+      <section class="time">
+        <img class="time-img" src="./assets/img/Shower.png" alt="">
+        <div class="time-info">
+          <h2 class="time-temperature">
+            15 ° C
+          </h2>
+          <h3>
+            Shower
+          </h3>
+          <p>Today  .  Fri 5 jun</p>
+          <p><span class="iconify" data-icon="carbon:location-filled" data-rotate="180deg" data-flip="horizontal,vertical"></span>Helsinky</p>
+        </div>
+      </section>
+      <section class="places hidden">
+        <span class="iconify" id="close-places" data-icon="ci:close-big" data-rotate="180deg" data-flip="horizontal,vertical"></span>
+        <div class="place-search">
+          <div class="input-search">
+            <span class="iconify" data-icon="entypo:magnifying-glass" style="color: #616475;" data-rotate="180deg" data-flip="horizontal,vertical"></span>
+            <input class="input-place" type="text" placeholder="Search location">
+          </div>
+          <button id="search-btn">
+            Search
+          </button>
+        </div>
+        <div class="item-place">
+          <p>london</p>
+          <span class="iconify" data-icon="fe:arrow-right" data-rotate="180deg" data-flip="horizontal,vertical"></span>
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="measures">
+        <button class="button-celsius button-active" data-active="true" data-type="celsius"><span class="iconify" data-icon="mdi:temperature-celsius" data-rotate="180deg" data-flip="horizontal,vertical"></span></button>
+        <button class="button-fahrenheit button-disabled" data-active="false" data-type="fahrenheit"><span class="iconify" data-icon="mdi:temperature-fahrenheit" data-rotate="180deg" data-flip="horizontal,vertical"></span></button>
       </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
+      <section class="time-weekend">
+        <div class="card-time">
+          <p>Tomorrow</p>
+          <img src="./assets/img/Sleet.png" alt="">
+          <p>13°C</p>
+          <p>11°C</p>
+        </div>
+        <div class="card-time">
+          <p>Tomorrow</p>
+          <img src="./assets/img/Sleet.png" alt="">
+          <p>13°C</p>
+          <p>11°C</p>
+        </div>
+        <div class="card-time">
+          <p>Tomorrow</p>
+          <img src="./assets/img/Sleet.png" alt="">
+          <p>13°C</p>
+          <p>11°C</p>
+        </div>
+        <div class="card-time">
+          <p>Tomorrow</p>
+          <img src="./assets/img/Sleet.png" alt="">
+          <p>13°C</p>
+          <p>11°C</p>
+        </div>
+        <div class="card-time">
+          <p>Tomorrow</p>
+          <img src="./assets/img/Sleet.png" alt="">
+          <p>13°C</p>
+          <p>11°C</p>
+        </div>
+      </section>
+      <section class="time_Hightlights">
+        <h3>Today’s Hightlights </h3>
+        <section class="data-cards">
+          <section class="data">
+            <p>Wind status</p>
+              <div class="data-mesures">
+                <span>23</span>
+                <p>mph</p>
+              </div>
+          </section>
+          <section class="data">
+            <p>Humidity</p>
+            <div class="data-mesures">
+              <span>80</span>
+              <p>%</p>
+            </div>
+            
+          </section>
+          <section class="data">
+            <p>Visibility</p>
+            <div class="data-mesures">
+              <span>8,0</span>
+              <p>miles</p>
+            </div>
+          </section>
+          <section class="data">
+            <p>Air Pressure</p>
+            <div class="data-mesures">
+              <span>8,0</span>
+              <p>mb</p>
+            </div>
+          </section>
+        </section>
+      </section>
+      <footer>
+        created by Jesus-bit - <a href="devChallenges.io">devChallenges.io</a> 
+      </footer>
+    </main>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   </body>
 </html>

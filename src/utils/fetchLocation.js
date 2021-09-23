@@ -1,5 +1,5 @@
 import renderData from './renderData.js'
-const APIBase = 'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/';
+const APIBase = 'https://www.metaweather.com/api/location/';
 async function fetchData(id) {
     const API = `${APIBase}${id}/`;
     try {

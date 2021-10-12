@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://jesus-bit.github.io/WeatherApp/tree/master/assets/img/2021-09-22.png)
+![screenshot](./assets/img/2021-09-22.png)
 
 This is a web application that gives you the weather according to your location or you can search for other cities. The challenges I faced when building it were:
 

@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Raleway';
-    src: url(../assets/Fonts/raleway-v22-latin-600.woff2) format('woff2'),
-        url(../assets/Fonts/raleway-v22-latin-600.woff) format('woff');
+    src: url(../../assets/Fonts/raleway-v22-latin-600.woff2) format('woff2'),
+        url(../../assets/Fonts/raleway-v22-latin-600.woff) format('woff');
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Raleway';
-    src: url(../assets/Fonts/raleway-v22-latin-500.woff2) format('woff2'),
-        url(../assets/Fonts/raleway-v22-latin-500.woff) format('woff');
+    src: url(../../assets/Fonts/raleway-v22-latin-500.woff2) format('woff2'),
+        url(../../assets/Fonts/raleway-v22-latin-500.woff) format('woff');
     font-weight: 500;
     font-style: normal;
 }
@@ -62,7 +62,7 @@ header, .time{
     color: #E7E7EB;
 }
 .time{
-    background-image: url('../assets/img/Cloud-background.png');
+    background-image: url('../../assets/img/Cloud-background.png');
     background-repeat: no-repeat;
     background-position: center;
     display: flex;

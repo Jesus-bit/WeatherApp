@@ -7,6 +7,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 /** @type {import('webpack').Configuration} */
 
 module.exports = {
+    mode: "development",
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -61,6 +62,11 @@ module.exports = {
                 }
             }
         ]
+    },
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 3000
     },
     plugins: [
         new HtmlWebpackPlugin({

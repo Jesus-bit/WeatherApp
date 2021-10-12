@@ -1,53 +1,60 @@
-import fetchLocation from './utils/fetchLocation.js';
-import getGeolocation from './utils/geolocation.js';
-import '../styles/style.css';
-window.addEventListener('load', () => {
-    fetchLocation({
-        string: 'query',
-        value: 'san'
-    });
-})
-const buttonPlaces = document.getElementById('search');
-const menuSearch = document.querySelector('.places');
-export const imgs = {
-    lr: 'LightRain',
-    s: 'Shower',
-    hr: 'HeavyRain',
-    hc: 'HeavyCloud',
-    c: 'Clear',
-    lc: 'LightCloud',
-    t: 'Thunderstorm',
-    sn: 'snow',
-    sl: 'Sleet',
-    h: 'Hail'
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import HelloWorld from './components/HelloWorld';
+import './styles/style.css'
 
-buttonPlaces.addEventListener('click', () =>{
+ReactDOM.render(
+    <HelloWorld text="Hola" />,
+    document.getElementById('app')
+)
+// import fetchLocation from './utils/fetchLocation.js';
+// import getGeolocation from './utils/geolocation.js';
+// import '../styles/style.css';
+// window.addEventListener('load', () => {
+//     fetchLocation({
+//         string: 'query',
+//         value: 'san'
+//     });
+// })
+// const buttonPlaces = document.getElementById('search');
+// const menuSearch = document.querySelector('.places');
+// export const imgs = {
+//     lr: 'LightRain',
+//     s: 'Shower',
+//     hr: 'HeavyRain',
+//     hc: 'HeavyCloud',
+//     c: 'Clear',
+//     lc: 'LightCloud',
+//     t: 'Thunderstorm',
+//     sn: 'snow',
+//     sl: 'Sleet',
+//     h: 'Hail'
+// }
 
-    menuSearch.classList.remove('hidden');
+// buttonPlaces.addEventListener('click', () =>{
 
-    const closeButton = document.querySelector('#close-places');
+//     menuSearch.classList.remove('hidden');
 
-    closeButton.addEventListener('click', () => {
-        menuSearch.classList.add('hidden');
-    });
+//     const closeButton = document.querySelector('#close-places');
 
-    const searchButton = document.querySelector('#search-btn');
-    let inputPlace = document.querySelector('.input-place');
-    searchButton.addEventListener('click', () => fetchLocation({
-        string: 'query',
-        value: inputPlace.value,
-    }))
-});
+//     closeButton.addEventListener('click', () => {
+//         menuSearch.classList.add('hidden');
+//     });
 
-const locationButton = document.querySelector('.pocision-button');
-if ("geolocation" in navigator) {
-    locationButton.addEventListener('click', getGeolocation);
-} else {
-    alert("Geolocation offline in navigator");
-}
+//     const searchButton = document.querySelector('#search-btn');
+//     let inputPlace = document.querySelector('.input-place');
+//     searchButton.addEventListener('click', () => fetchLocation({
+//         string: 'query',
+//         value: inputPlace.value,
+//     }))
+// });
+
+// const locationButton = document.querySelector('.pocision-button');
+// if ("geolocation" in navigator) {
+//     locationButton.addEventListener('click', getGeolocation);
+// } else {
+//     alert("Geolocation offline in navigator");
+// }
 
 
-const fahrenheitToCelsius = degrees => (degrees - 32) * 5 / 9;
-
-
+// const fahrenheitToCelsius = degrees => (degrees - 32) * 5 / 9;

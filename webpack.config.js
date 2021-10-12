@@ -66,7 +66,7 @@ module.exports = {
             filename: './index.html' // NOMBRE FINAL DEL ARCHIVO
         }),
         new MiniCssExtractPlugin({
-            filename: 'assets/[name].css'
+            filename: '[name].css'
         }),
         new CopyPlugin({
             patterns: [

@@ -7,13 +7,22 @@ const TerserPlugin = require('terser-webpack-plugin');
 /** @type {import('webpack').Configuration} */
 
 module.exports = {
+    mode: "development",
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@styles': path.resolve(__dirname, 'src/styles'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@images': path.resolve(__dirname, 'src/assets/img/'),
+            '@hooks': path.resolve(__dirname, 'src/hooks/')
+        }
     },
     module: {
         rules: [
@@ -34,9 +43,8 @@ module.exports = {
                 }]
             },
             {
-                test: /\.css$/i,
-                use: "css-loader"
-                
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
             },
             {
                 test: /\.(png|svg|jpg)/,
@@ -62,6 +70,12 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        open: '/',
+        port: 3000
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html', // LA RUTA AL TEMPLATE HTML
@@ -73,7 +87,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, "assets"),
+                    from: path.resolve(__dirname, "src/assets"),
                     to: "assets"
                 }
             ]

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './components/HelloWorld';
-import './styles/style.css'
+import App from './layout/App';
+import '@styles/index.css'
 
 ReactDOM.render(
-    <HelloWorld text="Hola" />,
+    <App/>,
     document.getElementById('app')
 )
 // import fetchLocation from './utils/fetchLocation.js';
